@@ -2,7 +2,7 @@
     min-height: 100vh;
     /* warm golden background (no image) */
     background: linear-gradient(180deg, #fbf8f2 0%, #f7e9c1 40%, #f0d08a 100%);
-    padding: 100px 20px 80px;
+    padding: 100px 20px 150px;
     position: relative;
     /* Three-column layout: sidebar - content - sidebar */
     display: grid;
@@ -676,7 +676,7 @@
 
 @media (max-width: 768px) {
     .article-page {
-        padding: 80px 0 100px;
+        padding: 80px 0 200px;
         /* Stack layout on mobile: only show main content */
         display: block;
         grid-template-columns: unset;
@@ -805,7 +805,7 @@
 
 @media (max-width: 640px) {
     .article-page {
-        padding: 70px 0 80px;
+        padding: 70px 0 180px;
         /* Ensure full height is available for content */
         display: block;
         min-height: auto;
