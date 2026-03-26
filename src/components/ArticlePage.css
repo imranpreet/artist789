@@ -11,6 +11,9 @@
     align-items: start;
     max-width: 1900px;
     margin: 0 auto;
+    width: 100%;
+    height: auto;
+    overflow: visible;
 }
 
 /* Sidebars */
@@ -182,7 +185,8 @@
 
 .article-content {
     background: #fff;
-    overflow: hidden;
+    overflow: visible;
+    width: 100%;
 }
 
 /* Article Header - Centered Large Title */
@@ -677,6 +681,21 @@
         display: block;
         grid-template-columns: unset;
         gap: unset;
+        min-height: auto;
+        height: auto;
+        overflow: visible;
+    }
+    
+    .article-container {
+        max-width: 100%;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .article-content {
+        overflow: visible;
+        width: 100%;
+        background: #fff;
     }
     
     /* Hide sidebars on mobile */
@@ -732,6 +751,8 @@
         padding: 0 16px 40px;
         font-size: 16px;
         line-height: 1.8;
+        max-width: 100%;
+        width: 100%;
     }
     
     .article-body h2 {
@@ -788,6 +809,19 @@
         /* Ensure full height is available for content */
         display: block;
         min-height: auto;
+        height: auto;
+        overflow: visible;
+    }
+    
+    .article-container {
+        max-width: 100%;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .article-content {
+        overflow: visible;
+        width: 100%;
     }
 
     /* Ensure article container scrolls smoothly on touch */
@@ -805,6 +839,8 @@
         touch-action: pan-y;
         -webkit-overflow-scrolling: touch;
         padding: 0 14px 40px;
+        max-width: 100%;
+        width: 100%;
     }
 
     .back-to-blog {
