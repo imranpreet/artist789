@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import BlogCard from './BlogCard';
 import BlogListItem from './BlogListItem';
+import ArticleGrid from './ArticleGrid';
 import './BlogSection.css';
 
 const blogData = [
@@ -476,6 +477,9 @@ const BlogSection = () => {
                         })}
                     </div>
                 </div>
+
+                {/* Article Grid: All 17 Articles Display - Carousel with Gold Frames */}
+                <ArticleGrid articles={blogData} />
             </div>
         </section>
     );
