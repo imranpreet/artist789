@@ -672,7 +672,16 @@
 
 @media (max-width: 768px) {
     .article-page {
-        padding: 80px 0 60px;
+        padding: 80px 0 100px;
+        /* Stack layout on mobile: only show main content */
+        display: block;
+        grid-template-columns: unset;
+        gap: unset;
+    }
+    
+    /* Hide sidebars on mobile */
+    .article-sidebar {
+        display: none !important;
     }
     
     .back-to-blog {
@@ -720,7 +729,7 @@
     }
     
     .article-body {
-        padding: 0 16px;
+        padding: 0 16px 40px;
         font-size: 16px;
         line-height: 1.8;
     }
@@ -771,37 +780,14 @@
         width: 44px;
         height: 44px;
     }
-    
-    /* Mobile sidebar adjustments */
-    .article-sidebar {
-        max-width: 500px;
-        padding: 20px 16px;
-        margin: 32px auto 0;
-    }
-    
-    .sidebar-title {
-        font-size: 14px;
-        padding-bottom: 8px;
-    }
-    
-    .sidebar-article-image {
-        width: 100%;
-        height: 160px;
-    }
-    
-    .sidebar-article-title {
-        font-size: 14px;
-        max-width: 100%;
-    }
 }
 
 @media (max-width: 640px) {
     .article-page {
-        padding: 70px 0 50px;
-        /* Improve mobile scrolling */
-        -webkit-overflow-scrolling: touch;
-        overflow-y: auto;
-        height: 100%;
+        padding: 70px 0 80px;
+        /* Ensure full height is available for content */
+        display: block;
+        min-height: auto;
     }
 
     /* Ensure article container scrolls smoothly on touch */
@@ -818,6 +804,7 @@
         /* Improve readability and scrolling */
         touch-action: pan-y;
         -webkit-overflow-scrolling: touch;
+        padding: 0 14px 40px;
     }
 
     .back-to-blog {
